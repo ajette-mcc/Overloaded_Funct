@@ -27,13 +27,28 @@ fun main(args: Array<String>) {
         Selection = readLine()!!.toInt()
 
         if (Selection == 1) {
-            Contact = "Al"
-            Phone = "123-4567"
+            // User to enter Customer (Contact) and Customer Phone # (Phone).
+            print("Enter Customer Name: ")
+            Contact = readLine()!!.toString()
+            print("Enter Customer Phone #: ")
+            Phone = readLine()!!.toString()
             Display_Cust_Info(Contact, Phone)
         }
+        else if (Selection == 2) {
+            // User to enter Business Name (Business), Business Contact (Contact) and Business Phone # (Phone).
+            print("Enter Business Name: ")
+            Business = readLine()!!.toString()
+            print("Enter Business Contact Person: ")
+            Contact = readLine()!!.toString()
+            print("Enter Business Phone #: ")
+            Phone = readLine()!!.toString()
+            Display_Cust_Info(Business, Contact, Phone)
+        }
+        else if (Selection != 3)
+            println("Invalid Entry")
+        println()
 
     } while (Selection != 3)
 
     println("Program arguments: ${args.joinToString()}")
-
 }
